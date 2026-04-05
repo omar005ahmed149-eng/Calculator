@@ -10,27 +10,17 @@ class Mainscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body:Stack(
         children: [
-          Container(
-            color: ColorsManager.black,
+          Padding(
+            padding: const EdgeInsets.all(10),
             child: Column(
               children: [
                 Expanded(
-                    flex:2,
-                    child: TopSection()),
-                Expanded(
-                  flex: 1,
-                  child: Column(
-                    mainAxisAlignment: .spaceBetween,
-                    children: [
-                      Container(height: 1,color: ColorsManager.white,),
-                      Container(height: 1,color: ColorsManager.white,),
-                      Container(height: 1,color: ColorsManager.white,),
-                    ],
-                  ),
+                    flex:4,
+                    child: TopSection()
                 ),
-
                 Expanded(
                    flex:6,
                    child: BottomSection()),

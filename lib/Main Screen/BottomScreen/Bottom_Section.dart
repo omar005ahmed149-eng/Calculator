@@ -1,6 +1,7 @@
 import 'package:calculator/Main%20Screen/BottomScreen/widgets/Customized_Button.dart';
 import 'package:calculator/core/Colors%20Manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BottomSection extends StatelessWidget {
   const BottomSection({super.key});
@@ -17,7 +18,7 @@ class BottomSection extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          flex: 8,
+          flex: 6,
           child: Column(
             children: [
               Expanded(
@@ -44,7 +45,7 @@ class BottomSection extends StatelessWidget {
                       child: CustomizedButton(
                           number: "/",
                           fgcolor: ColorsManager.white,
-                          bgcolor:  ColorsManager.light_blue,
+                          bgcolor:  ColorsManager.dark_blue,
                           ontap: (){}
                       ),
                     ),
@@ -58,45 +59,39 @@ class BottomSection extends StatelessWidget {
                    Expanded(
                      child: Row(
                        children: [
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
+                         Expanded(child: CustomizedButton(number: "7", ontap: () {  },)),
+                         Expanded(child: CustomizedButton(number: "8", ontap: () {  },)),
+                         Expanded(child: CustomizedButton(number: "9", ontap: () {  },)),
                          ],
                      ),
                    ),
                    Expanded(
                      child: Row(
                        children: [
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
+                         Expanded(child: CustomizedButton(number: "4",ontap: () {  },)),
+                         Expanded(child: CustomizedButton(number: "5",ontap: () {  },)),
+                         Expanded(child: CustomizedButton(number: "6",ontap: () {  },)),
                          ],
                      ),
                    ),
                    Expanded(
                      child: Row(
                        children: [
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
+                         Expanded(child: CustomizedButton(number: "1", ontap: () {  },)),
+                         Expanded(child: CustomizedButton(number: "2", ontap: () {  },)),
+                         Expanded(child: CustomizedButton(number: "3", ontap: () {  },)),
                          ],
                      ),
                    ),
                    Expanded(
                      child: Row(
                        children: [
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         ],
-                     ),
-                   ),
-                   Expanded(
-                     child: Row(
-                       children: [
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
-                         CustomizedButton(number: "1", fgcolor: ColorsManager.dark_blue, bgcolor: ColorsManager.grey, ontap: () {  },),
+                         Expanded(
+                           flex:6,
+                             child: CustomizedButton(number: "0", ontap: () {  },)),
+                         Expanded(
+                             flex:3,
+                             child: CustomizedButton(number: ".", ontap: () {  },)),
                          ],
                      ),
                    ),
@@ -110,7 +105,42 @@ class BottomSection extends StatelessWidget {
           flex:2,
           child: Column(
             children: [
-
+              Expanded(
+                flex:2,
+                child: CustomizedButton(
+                    number: "*",
+                    fgcolor: ColorsManager.white,
+                    bgcolor:  ColorsManager.dark_blue,
+                    ontap: (){}
+                ),
+              ),
+              Expanded(
+                flex:2,
+                child: CustomizedButton(
+                    number: "-",
+                    fgcolor: ColorsManager.white,
+                    bgcolor:  ColorsManager.dark_blue,
+                    ontap: (){}
+                ),
+              ),
+              Expanded(
+                flex:3,
+                child: CustomizedButton(
+                    number: "+",
+                    fgcolor: ColorsManager.white,
+                    bgcolor:  ColorsManager.dark_blue,
+                    ontap: (){}
+                ),
+              ),
+              Expanded(
+                flex:3,
+                child: CustomizedButton(
+                    number: "=",
+                    fgcolor: ColorsManager.white,
+                    bgcolor:  ColorsManager.light_blue,
+                    ontap: (){}
+                ),
+              ),
             ],
           ),
         ),
