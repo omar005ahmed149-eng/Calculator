@@ -1,18 +1,8 @@
 import 'package:calculator/Main%20Screen/BottomScreen/widgets/Customized_Button.dart';
 import 'package:calculator/core/Colors%20Manager.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 class BottomSection extends StatelessWidget {
   const BottomSection({super.key});
-
-  final List<List<String>> buttons = const [
-    ["7", "8", "9"],
-    ["4", "5", "6"],
-    ["1", "2", "3"],
-    ["0", "."],
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -38,6 +28,7 @@ class BottomSection extends StatelessWidget {
                           number: "C",
                           fgcolor: ColorsManager.white,
                           bgcolor:  ColorsManager.light_grey,
+                          lightbgcolor: ColorsManager.white,
                           ontap: (){}
                       ),
                     ),
@@ -151,20 +142,3 @@ class BottomSection extends StatelessWidget {
 
 
 
-// buttons.map((row){
-// return Expanded(
-// child: Row(
-// children:row.map((value){
-// return Expanded(
-// child: CustomizedButton(
-// number: value,
-// fgcolor: ColorsManager.light_blue,
-// bgcolor:  ColorsManager.grey,
-// ontap: (){}
-// ),
-// );
-// }
-// ).toList(),
-// ),
-// );
-// }).toList(),
