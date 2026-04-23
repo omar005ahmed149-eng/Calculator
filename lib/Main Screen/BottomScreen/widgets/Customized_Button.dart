@@ -16,7 +16,7 @@ class CustomizedButton extends StatelessWidget {
     return Padding(
       padding:EdgeInsets.symmetric(vertical: 10.h,horizontal: 0.w),
       child: InkWell(
-        splashColor: bgcolor??ColorsManager.black.withOpacity(0.7),
+        splashColor: bgcolor??ColorsManager.grey.withOpacity(0.7),
         borderRadius: BorderRadius.circular(16.r),
         onTap: ontap,
         child: Card(

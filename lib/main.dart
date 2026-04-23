@@ -1,3 +1,5 @@
+import 'package:calculator/Main%20Screen/BottomScreen/Advanced_Bottom_Section.dart';
+import 'package:calculator/Main%20Screen/BottomScreen/Normal_Bottom_Section.dart';
 import 'package:calculator/Main%20Screen/MainScreen.dart';
 import 'package:calculator/core/THeme_Manager.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +19,13 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         darkTheme: ThemeManager.dark,
         theme: ThemeManager.light,
-        themeMode:ThemeMode.light,
+        themeMode:ThemeMode.dark,
         debugShowCheckedModeBanner: false,
         home: Mainscreen(),
+        routes: {
+          "normal":(context)=>Normal_BottomSection(),
+          "Advanced":(context)=>Advanced_section(),
+        },
       ),
     );
   }
